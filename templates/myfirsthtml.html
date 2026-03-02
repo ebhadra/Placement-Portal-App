@@ -1,14 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
+    <title>My First Styled Form</title>
+    <style>
+        /* 1. The Background - The "Room" the form sits in */
+        body {
+            background-color: lightblue; /* A nice, calm color */
+            font-family: Arial, sans-serif; /* A clean, easy-to-read font */
+            display: flex; /* This centers the form perfectly */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-</style>
+        /* 2. The Form Card - The "Paper" we write on */
+        .form-container {
+            background-color: white; 
+            padding: 30px;
+            border-radius: 20px; /* Makes the corners round and friendly */
+            border: 5px solid #007bff; /* A thick blue border */
+            width: 300px;
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.1); /* A little shadow for depth */
+        }
+
+        /* 3. The Labels - The titles above the boxes */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #333;
+            text-align: left;
+        }
+
+        /* 4. The Inputs - The boxes where you type */
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid lightgrey;
+            border-radius: 10px; /* Round boxes are easier to look at */
+            font-size: 16px;
+        }
+
+        /* 5. The Button - The "Go" button! */
+        button {
+            background-color: #28a745; /* Green for "Go" */
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer; /* Makes the mouse turn into a hand */
+        }
+
+        /* When you hover the mouse over the button, it changes! */
+        button:hover {
+            background-color: #218838;
+            transform: scale(1.05); /* Makes it pop out a little bit */
+        }
+    </style>
+</head>
 <body>
-    
+
+    <div class="form-container">
+        <h1 style="color: #007bff; margin-top: 0;">Sign Up!</h1>
+        
+        <form>
+            <label>Full Name</label>
+            <input type="text" placeholder="Your name here">
+
+            <label>Email</label>
+            <input type="email" placeholder="example@email.com">
+
+            <label for="">Password</label>
+            <input type="text" placeholder="******">
+
+            <label>Gender</label>
+            <select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <button type="submit">Send Form! 🚀</button>
+        </form>
+    </div>
+
 </body>
 </html>
